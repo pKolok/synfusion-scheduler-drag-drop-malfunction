@@ -1,0 +1,19 @@
+<div class="control-section">
+  <ejs-schedule id="schedule" #scheduleObj width="100%" height="650px"
+      [selectedDate]="selectedDate" [group]='group'
+      [eventSettings]='eventSettings' 
+      >
+      <e-resources>
+          <e-resource field="TaskId" title="Category" 
+              [dataSource]="categoryDataSource"
+              name="Categories" textField="text" idField="id" 
+              groupIDField="groupId" colorField="color">
+        </e-resource>
+      </e-resources>        
+      <e-views>
+          <e-view option='TimelineWeek' displayName="Week" 
+              [headerRows]="weekHeaderRows"></e-view>
+          <e-view option='TimelineMonth' displayName="Month"></e-view>
+      </e-views>
+  </ejs-schedule>
+</div>
